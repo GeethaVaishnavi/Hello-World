@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //to-d0 list project
+
+let box = document.createElement("div");
+box.style.border ="2px solid";
+box.style.height ="60vh";
+box.style.backgroundColor = "aqua";
+
+document.body.appendChild(box);
+
+
+
+
+let input = document.createElement("input");
+
+box.appendChild(input);
+
+input.style.height = "28px";
+input.style.width = "60%";
+input.style.borderRadius = "5px";
+input.style.marginTop = "20px";
+input.style.marginLeft = "20vw"
+
+
+
+let btn = document.createElement("button");
+btn.innerHTML ="add/save";
+btn.style.height ="28px";
+btn.style.borderRadius = "5px";
+btn.style.cursor = "pointer";
+
+box.appendChild(btn);
+
+
+
+btn.addEventListener("click",function(){
+  input.setAttribute("type","text");
+  let para = document.createElement("p");
+box.appendChild(para);
+para.innerHTML = input.value;
+
+
+let box1 = document.createElement("div");
+box.appendChild(box1);
+box1.style.backgroundColor ="yellow"
+box1.style.border ="2px solid black"
+box1.style.height = "fit-content"
+box1.style.width = "fit-content"
+box1.style.display ="flex"
+box1.style.marginLeft ="190px"
+box1.style.marginTop = "4px"
+
+
+let btn1 = document.createElement("button");
+btn1.innerHTML= "X"
+btn1.style.margin ="12px"
+btn1.style.cursor = "pointer";
+btn1.style.backgroundColor = "red"
+box1.appendChild(para);
+box1.appendChild(btn1);
+
+let edit = document.createElement("button");
+edit.innerHTML = "edit/replace";
+edit.style.margin ="12px"
+edit.style.cursor = "pointer";
+edit.style.backgroundColor = "green"
+box1.appendChild(edit);
+
+let replace = document.createElement("input");
+
+
+edit.addEventListener("click",function (){
+  let count = 0;
+  box.appendChild(replace)
+  para.innerHTML = replace.value;
+      
+
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+btn1.addEventListener("click",function(){
+  para.innerHTML = "";
+ btn1.remove();
+ box1.remove();
+
+})
+
+
+input.value = "";
+
+  
+  
+})
+    </script>
+    
+</body>
+</html>
